@@ -7,4 +7,4 @@ class ArithmeticSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ArithmeticModel
-        fields = ('a','b','operation_type',)
+        fields = ('x','y','operation_type',)

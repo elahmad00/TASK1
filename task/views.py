@@ -35,18 +35,18 @@ class CreateView(APIView):
         if serializer.is_valid():
             serializer.save()
             """Getting datas from submitted form"""
-            a= serializer.data['a']
-            b = serializer.data['b']
+            x= serializer.data['x']
+            y = serializer.data['y']
             optype = serializer.data['operation_type']
 
             """main sequence """
             if optype == "addition":
-                result = a + b
+                result = x + y
             elif optype == "subtraction":
-                result = a - b
+                result = x - y
 
             elif optype == "multiplication":
-                result = a * b
+                result = x * y
                 
             else:
                 result = "operator not found"
